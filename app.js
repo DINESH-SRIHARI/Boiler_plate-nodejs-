@@ -4,7 +4,7 @@ const bodyparser=require('body-parser')
 const ejs=require('ejs')
 app.use(bodyparser.urlencoded({extended:true}))
 app.set('view engine','ejs')
-
+app.use(express.static('public'))
 app.get('/',(req,res)=>{
     res.send('<h1>Home page</h1>')
 })
